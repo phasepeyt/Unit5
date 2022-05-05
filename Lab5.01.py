@@ -34,6 +34,9 @@ get the entire dictionary printed to the screen.
 Lesson 6.01 did not cover all the techniques for manipulating dictionaries that you will need to program these features. Search for the necessary information in the [Python tutorial about dictionaries][1] and the [advanced Python documentation about dictionaries][2].
 '''
 
+from pickle import TRUE
+
+
 my_dictionary = {
 'lol': 'laugh out loud',
 'wyd': 'what are u doing',
@@ -42,3 +45,28 @@ my_dictionary = {
 'nbd': 'no big deal',
 'mb' : 'my bad'
 }
+
+userinput = 'hi'
+def quit():
+    False
+
+
+def dic_func():
+        
+        userinput = input("what word would you like to look up? ")
+        if userinput in my_dictionary:
+            print(my_dictionary[userinput])
+        elif userinput == 'quit':
+            print("goodbye!")
+            False
+        else:
+            print("word unavailable ")
+
+
+while True:
+    
+    dic_func()
+    if userinput == 'quit':
+        break
+
+
