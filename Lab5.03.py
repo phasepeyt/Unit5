@@ -43,3 +43,30 @@ Use split() to allow the user to input add Friday watch tv and relax.  Create a 
 that doesn't allow any duplicates across any of the days. Make sure when you add a to-do item that it 
 doesn't exist in the to-do lists of any of the days before adding.
 '''
+#starting dictionary
+dict = {}
+
+#function definitions
+def get():
+    user1 = input("what day? ")
+    print(dict[user1])
+
+def add():
+    user1 = input("what day? ")
+    user2 = input(f"what would you like to add to {user1}s to do list? ")
+    if user2 in dict:
+        print("that is already in the dictionary")
+    else:
+         dict[user1] = user2
+
+#starter code
+while True:
+    userinput = input("would you like to get or add? ")
+    if userinput == 'get':
+        get()
+    elif userinput == 'add':
+        add()
+    elif userinput == 'q':
+        break
+    else:
+        print("invalid response")
